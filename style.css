@@ -1,0 +1,40 @@
+body {
+       margin: 20px;
+       padding: 0;
+       background: #743839;
+}
+
+.container {
+       max-width: 900px;
+       margin: auto;
+       border: 3px solid white;
+       background: white;
+}
+
+.main img,
+.imgs img {
+       width: 100%;
+}
+
+.imgs {
+       display: grid;
+       grid-template-columns: repeat(5, 1fr);
+       grid-gap: 3px;
+}
+
+.opaque {
+       opacity: 0;
+       animation: lighting 0.8s ease-in forwards;
+}
+
+@keyframes lighting {
+       to {
+              opacity: 1;
+       }
+}
+
+@media(max-width: 600px) {
+       .imgs {
+              grid-template-columns: repeat(3, 1fr);
+       }
+}
